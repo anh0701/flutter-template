@@ -1,8 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'custom_navbar/bottom_navbar.dart';
-import 'views/screen1.dart';
-import 'views/screen2.dart';
+
+import '../custom_navbar/bottom_navbar.dart';
+import 'screen1.dart';
+import 'screen2.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key});

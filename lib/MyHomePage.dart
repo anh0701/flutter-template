@@ -39,7 +39,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     ),
                   )),
           // circle button
-            circle_button(Icons.phone, ()=>{}),
+            circle_button(Icons.phone,Colors.white, Colors.red, ()=>{}),
         ],
       ),
     );

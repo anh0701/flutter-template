@@ -25,6 +25,7 @@ class _MyHomePageState extends State<MyHomePage> {
           ripple_button(
               "test ripple button",
               200,
+              Colors.white,
               Colors.green,
               () => showDialog<String>(
                     context: context,

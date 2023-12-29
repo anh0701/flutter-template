@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
 import 'custom_button/circle_button.dart';
+import 'custom_button/icon_text_button.dart';
 import 'custom_button/ripple_button.dart';
+import 'custom_button/rounded_button.dart';
 import 'custom_button/switch_button.dart';
 
 class MyHomePage extends StatefulWidget {
@@ -12,6 +14,8 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  bool _switchValue = false;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -38,8 +42,22 @@ class _MyHomePageState extends State<MyHomePage> {
                       ],
                     ),
                   )),
+
           // circle button
             circle_button(Icons.phone,Colors.white, Colors.red, ()=>{}),
+
+          // switch button
+          switch_button(_switchValue, Colors.black, (p0) {
+            setState(() {
+              _switchValue = p0;
+            });
+           }),
+
+          //  rounded button
+          rounded_button("text button", Colors.black, ()=>{}),
+
+          // icon text button
+          icon_text_button("hello", Colors.red, Icons.phone, Colors.white, MainAxisSize.min , ()=>{}),
         ],
       ),
     );

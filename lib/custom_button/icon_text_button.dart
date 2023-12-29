@@ -15,6 +15,8 @@ Widget icon_text_button(String text, Color color_button, IconData icon,
         child: Container(
           padding: EdgeInsets.all(12),
           child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisSize: size,
             children: [
               Icon(

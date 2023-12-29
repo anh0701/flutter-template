@@ -1,10 +1,8 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
-import 'custom_button/circle_button.dart';
-import 'custom_button/icon_text_button.dart';
-import 'custom_button/ripple_button.dart';
-import 'custom_button/rounded_button.dart';
-import 'custom_button/switch_button.dart';
+import 'custom_navbar/bottom_navbar.dart';
+import 'views/screen1.dart';
+import 'views/screen2.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key});
@@ -14,54 +12,31 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  bool _switchValue = false;
+  List<Widget> children = [Screen1(), Screen2()];
+  List<BottomNavigationBarItem> items = [
+    BottomNavigationBarItem(
+      icon: Icon(CupertinoIcons.star_fill),
+      label: 'Favorites',
+    ),
+    BottomNavigationBarItem(
+      icon: Icon(CupertinoIcons.clock_solid),
+      label: 'Recents',
+    ),
+  ];
+  int currentIndex = 0;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        children: [
-          // example using ripple_button
-          ripple_button(
-              "test ripple button",
-              200,
-              Colors.white,
-              Colors.green,
-              () => showDialog<String>(
-                    context: context,
-                    builder: (BuildContext context) => AlertDialog(
-                      title: const Text('AlertDialog Title'),
-                      content: const Text('AlertDialog description'),
-                      actions: <Widget>[
-                        TextButton(
-                          onPressed: () => Navigator.pop(context, 'Cancel'),
-                          child: const Text('Cancel'),
-                        ),
-                        TextButton(
-                          onPressed: () => Navigator.pop(context, 'OK'),
-                          child: const Text('OK'),
-                        ),
-                      ],
-                    ),
-                  )),
-
-          // circle button
-            circle_button(Icons.phone,Colors.white, Colors.red, ()=>{}),
-
-          // switch button
-          switch_button(_switchValue, Colors.black, (p0) {
-            setState(() {
-              _switchValue = p0;
-            });
-           }),
-
-          //  rounded button
-          rounded_button("text button", Colors.black, ()=>{}),
-
-          // icon text button
-          icon_text_button("hello", Colors.red, Icons.phone, Colors.white, MainAxisSize.min , ()=>{}),
-        ],
-      ),
+      bottomNavigationBar: // bottom navbar
+          bottom_navbar(
+              children,
+              items,
+              (index) => setState(() {
+                    currentIndex = index;
+                    // print(currentIndex);
+                  }),
+              currentIndex),
     );
   }
 }

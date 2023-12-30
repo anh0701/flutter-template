@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../custom_navbar/bottom_navbar.dart';
+import 'message_page.dart';
 import 'screen1.dart';
 import 'screen2.dart';
 
@@ -13,7 +14,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  List<Widget> children = [Screen1(), Screen2()];
+  List<Widget> children = [Screen1(), Screen2(), MessagePage()];
   List<BottomNavigationBarItem> items = [
     BottomNavigationBarItem(
       icon: Icon(CupertinoIcons.star_fill),
@@ -22,6 +23,10 @@ class _MyHomePageState extends State<MyHomePage> {
     BottomNavigationBarItem(
       icon: Icon(CupertinoIcons.clock_solid),
       label: 'Recents',
+    ),
+    BottomNavigationBarItem(
+      icon: Icon(Icons.message),
+      label: 'Message',
     ),
   ];
   int currentIndex = 0;

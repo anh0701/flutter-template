@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../custom_color/custom_color.dart';
-import 'message_theme.dart';
+import '../themes/message_theme.dart';
 
 class MessagePage extends StatefulWidget {
   const MessagePage({super.key});
@@ -13,7 +13,9 @@ class MessagePage extends StatefulWidget {
 class _MessagePageState extends State<MessagePage> {
   @override
   Widget build(BuildContext context) {
-    return message_theme(
+    return Column(
+      children: [
+        message_theme(
         text_received: Text(
           'Hi',
           style: TextStyle(
@@ -28,7 +30,18 @@ class _MessagePageState extends State<MessagePage> {
               fontSize: 13,
               color: Colors.white),
         ),
-        box_color_received: Colors.black12,
-        box_color_sended: Color.fromARGB(255, 144, 89, 6));
+        box_color_received: Color.fromARGB(31, 227, 20, 20),
+        box_color_sended: Color.fromARGB(255, 144, 89, 6)),
+        message_theme(
+        text_received: Text(
+          'where are you?',
+          style: TextStyle(
+              decoration: TextDecoration.none,
+              fontSize: 13,
+              color: CustomColor.textCommonColor),
+        ),
+        box_color_received: Color.fromARGB(31, 227, 20, 20)),      
+      ],
+    );
   }
 }

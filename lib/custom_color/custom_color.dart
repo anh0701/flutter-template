@@ -6,5 +6,5 @@ class CustomColor {
   static const bThirdSecondaryColor = Color(0xFF5E6BD8);
   static const bGravishBlueColor = Color(0xFF9BA1D2);
   static const buttonColor = Colors.red;
-  static const textCommonColor = Color.fromARGB(255, 59, 39, 8);
+  static const textCommonColor = Color.fromARGB(255, 234, 201, 151);
 }

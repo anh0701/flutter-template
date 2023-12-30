@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
 
-Widget ripple_button(String text, double width, Color color_text, Color color_button, void Function()? onTap) {
+Widget ripple_button(
+    {required String text,
+    required double width,
+    Color color_text = Colors.black,
+    Color color_button = Colors.blue,
+    void Function()? onTap}) {
   return Container(
     width: width,
     decoration: BoxDecoration(
@@ -14,7 +19,11 @@ Widget ripple_button(String text, double width, Color color_text, Color color_bu
         onTap: onTap,
         child: Container(
           padding: EdgeInsets.all(12),
-          child: Text(text, textAlign: TextAlign.center, style: TextStyle(color: color_text),),
+          child: Text(
+            text,
+            textAlign: TextAlign.center,
+            style: TextStyle(color: color_text),
+          ),
         ),
       ),
     ),

@@ -19,21 +19,33 @@ class _Screen2State extends State<Screen2> {
     return Column(
       children: [
         // circle button
-        circle_button(Icons.phone, Colors.white, Colors.red, () => {}),
+        circle_button(
+            icon: Icons.phone,
+            color_icon: Colors.white,
+            color_background: Colors.red,
+            onPressed: () => {}),
 
         // switch button
-        switch_button(_switchValue, Colors.green, (p0) {
-          setState(() {
-            _switchValue = p0;
-          });
-        }),
+        switch_button(
+            switchValue: _switchValue,
+            color: Colors.green,
+            onChanged: (p0) {
+              setState(() {
+                _switchValue = p0;
+              });
+            }),
 
         //  rounded button
-        rounded_button("text button", Colors.black, () => {}),
+        rounded_button(
+            text: "text button", color: Colors.black, onPressed: () => {}),
 
         // icon text button
-        icon_text_button("hello", Colors.red, Icons.phone, Colors.white,
-            MainAxisSize.min, () => {}),
+        icon_text_button(
+            text: Text("hello"),
+            color_button: Colors.red,
+            icon: Icon(Icons.phone),
+            size: MainAxisSize.min,
+            onTap: () => {}),
       ],
     );
   }

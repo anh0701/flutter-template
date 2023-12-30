@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 
-Widget circle_button(IconData icon, Color color_icon, Color color_back,
-    void Function()? onPressed) {
+Widget circle_button(
+    {required IconData icon,
+    Color color_icon = Colors.white,
+    Color color_background = Colors.blue,
+    void Function()? onPressed}) {
   return ElevatedButton(
     onPressed: onPressed,
     child: Icon(
@@ -9,7 +12,7 @@ Widget circle_button(IconData icon, Color color_icon, Color color_back,
       color: color_icon,
     ),
     style: ElevatedButton.styleFrom(
-      backgroundColor: color_back,
+      backgroundColor: color_background,
       shape: CircleBorder(),
       padding: EdgeInsets.all(24),
     ),

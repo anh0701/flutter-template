@@ -16,7 +16,11 @@ class _Screen1State extends State<Screen1> {
       children: [
         // example using ripple_button
         ripple_button(
-            "test ripple button", 200, Colors.white, Colors.green, () => {}),
+            text: "test ripple button",
+            width: 200,
+            color_text: Colors.white,
+            color_button: Colors.green,
+            onTap: () => {}),
       ],
     );
   }

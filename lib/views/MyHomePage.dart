@@ -31,13 +31,14 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       bottomNavigationBar: // bottom navbar
           bottom_navbar(
-              children,
-              items,
-              (index) => setState(() {
-                    currentIndex = index;
-                    // print(currentIndex);
-                  }),
-              currentIndex),
+        children: children,
+        items: items,
+        onTap: (index) => setState(() {
+          currentIndex = index;
+          // print(currentIndex);
+        }),
+        currentIndex: currentIndex,
+      ),
     );
   }
 }

@@ -8,7 +8,7 @@ Widget message_theme(
     Text? text_received}) {
   return Column(
     children: [
-      Align(
+      text_sended != null ? Align(
         alignment: Alignment.centerRight,
         child: Container(
           margin: const EdgeInsets.all(8.0),
@@ -19,8 +19,8 @@ Widget message_theme(
           ),
           child: text_sended,
         ),
-      ),
-      Align(
+      ) : Container(),
+      text_received != null ? Align(
         alignment: Alignment.centerLeft,
         child: Container(
           margin: const EdgeInsets.all(8.0),
@@ -31,7 +31,7 @@ Widget message_theme(
           ),
           child: text_received,
         ),
-      )
+      ) : Container()
     ],
   );
 }

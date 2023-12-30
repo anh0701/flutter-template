@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
 Widget rounded_button(
-    {required String text, Color color = Colors.black, void Function()? onPressed}) {
+    {required String text,
+    Color color = Colors.black,
+    void Function()? onPressed}) {
   return TextButton(
       child: Text(text.toUpperCase(), style: TextStyle(fontSize: 14)),
       style: ButtonStyle(

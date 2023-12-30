@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 
-Widget icon_text_button({required Text text, Color color_button = Colors.blue, required Icon icon,
-    MainAxisSize size = MainAxisSize.min, void Function()? onTap}) {
+Widget icon_text_button(
+    {required Text text,
+    Color color_button = Colors.blue,
+    required Icon icon,
+    MainAxisSize size = MainAxisSize.min,
+    void Function()? onTap}) {
   return Container(
     decoration: BoxDecoration(
       borderRadius: BorderRadius.circular(30), //radius widget
@@ -23,7 +27,7 @@ Widget icon_text_button({required Text text, Color color_button = Colors.blue, r
               SizedBox(
                 width: 10,
               ),
-             text
+              text
             ],
           ),
         ),

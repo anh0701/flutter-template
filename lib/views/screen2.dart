@@ -20,8 +20,7 @@ class _Screen2State extends State<Screen2> {
       children: [
         // circle button
         circle_button(
-            icon: Icons.phone,
-            color_icon: Colors.white,
+            icon: Icon(Icons.phone, color: Colors.white,),
             color_background: Colors.red,
             onPressed: () => {}),
 

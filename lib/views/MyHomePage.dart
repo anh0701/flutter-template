@@ -1,7 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import '../custom_navbar/bottom_navbar.dart';
+// import '../custom_navbar/bottom_navbar_ios.dart';
+import '../custom_navbar/bottom_navbar_android.dart';
 import 'message_page.dart';
 import 'screen1.dart';
 import 'screen2.dart';
@@ -34,9 +35,9 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      body: children.elementAt(currentIndex),
       bottomNavigationBar: // bottom navbar
           bottom_navbar(
-        children: children,
         items: items,
         onTap: (index) => setState(() {
           currentIndex = index;

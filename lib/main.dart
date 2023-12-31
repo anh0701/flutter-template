@@ -1,3 +1,6 @@
+import 'package:flutter_localizations/flutter_localizations.dart';
+
+import 'views/screen1.dart';
 import 'views/message_page.dart';
 import 'package:flutter/material.dart';
 
@@ -15,11 +18,16 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
+       localizationsDelegates: [
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+      ],
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
       home: MyHomePage(),
+      // home: Screen1(),
       // home: MessagePage(),
     );
   }

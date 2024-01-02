@@ -23,7 +23,7 @@ if (flutterVersionName == null) {
 }
 
 android {
-    namespace "com.example.psychological_counseling_app"
+    namespace "com.example.demo"
     compileSdkVersion flutter.compileSdkVersion
     ndkVersion flutter.ndkVersion
 

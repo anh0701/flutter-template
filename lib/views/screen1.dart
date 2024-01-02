@@ -14,7 +14,7 @@ class _Screen1State extends State<Screen1> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 46, 78, 49),
+      backgroundColor: Color.fromARGB(255, 46, 65, 78),
       body: SafeArea(
         child: ListView(
           shrinkWrap: true,
@@ -36,7 +36,7 @@ class _Screen1State extends State<Screen1> {
                   // ),
                   suffixIcon: Icon(Icons.search)),
             ),
-
+            
             ripple_button(
                 text: Text(
                   "test ripple button",

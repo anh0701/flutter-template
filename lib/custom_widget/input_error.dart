@@ -5,7 +5,7 @@ Widget input_error() {
     child: TextField(
       decoration: InputDecoration(
           errorStyle: TextStyle(), errorText: 'Please enter something'),
-      readOnly: true,
+      // readOnly: true,
       onTap: () {
         //Go to the next screen
       },

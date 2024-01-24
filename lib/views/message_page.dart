@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../custom_color/custom_color.dart';
+import '../custom_widget/input.dart';
 import '../custom_widget/input_error.dart';
 import '../themes/message_theme.dart';
 
@@ -44,7 +45,9 @@ class _MessagePageState extends State<MessagePage> {
           ),
           box_color_received: Color.fromARGB(31, 227, 20, 20)), 
       
-          input_error(),     
+          // input_error(),  
+          customTextField(textInputType: TextInputType.emailAddress, hintText: 'enter email address'),   
+          customTextField(textInputType: TextInputType.visiblePassword, hintText: 'enter password'),   
         ],
       ),
     );

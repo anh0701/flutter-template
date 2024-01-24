@@ -1,6 +1,6 @@
 {
-    "name": "psychological_counseling_app",
-    "short_name": "psychological_counseling_app",
+    "name": "demo",
+    "short_name": "demo",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

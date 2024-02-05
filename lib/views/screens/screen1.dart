@@ -1,7 +1,7 @@
+import 'package:demo/views/widgets/input.dart';
+import 'package:demo/views/widgets/ripple_button.dart';
 import 'package:flutter/material.dart';
 
-import '../custom_button/ripple_button.dart';
-import '../custom_widget/input.dart';
 
 class Screen1 extends StatefulWidget {
   const Screen1({super.key});

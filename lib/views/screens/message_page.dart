@@ -1,9 +1,8 @@
+import 'package:demo/themes/message_theme.dart';
+import 'package:demo/views/widgets/custom_color.dart';
+import 'package:demo/views/widgets/input.dart';
 import 'package:flutter/material.dart';
 
-import '../custom_color/custom_color.dart';
-import '../custom_widget/input.dart';
-import '../custom_widget/input_error.dart';
-import '../themes/message_theme.dart';
 
 class MessagePage extends StatefulWidget {
   const MessagePage({super.key});

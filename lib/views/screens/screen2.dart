@@ -1,9 +1,8 @@
+import 'package:demo/views/widgets/circle_button.dart';
+import 'package:demo/views/widgets/icon_text_button.dart';
+import 'package:demo/views/widgets/rounded_button.dart';
+import 'package:demo/views/widgets/switch_button.dart';
 import 'package:flutter/material.dart';
-
-import '../custom_button/circle_button.dart';
-import '../custom_button/icon_text_button.dart';
-import '../custom_button/rounded_button.dart';
-import '../custom_button/switch_button.dart';
 
 class Screen2 extends StatefulWidget {
   const Screen2({super.key});

@@ -1,4 +1,5 @@
 import 'package:demo/views/widgets/input.dart';
+import 'package:demo/views/widgets/profile_image.dart';
 import 'package:demo/views/widgets/ripple_button.dart';
 import 'package:flutter/material.dart';
 
@@ -11,6 +12,7 @@ class Screen1 extends StatefulWidget {
 }
 
 class _Screen1State extends State<Screen1> {
+  String imgURL = "https://pbs.twimg.com/media/FMQ4xLSVgAIVsis.jpg";
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -20,7 +22,13 @@ class _Screen1State extends State<Screen1> {
           shrinkWrap: true,
           children: [
             // example using ripple_button
-
+            Row(
+              children: [
+                Container(
+                  child: ProfileImage(imageUrl: imgURL, size: 90, online: true,),
+                ),
+              ],
+            ),
             Container(
               decoration: BoxDecoration(
                 color: Colors.tealAccent,
@@ -44,7 +52,8 @@ class _Screen1State extends State<Screen1> {
                 ),
                 width: 200,
                 color_button: Colors.green,
-                onTap: () => {}),
+                onTap: () => {
+                }),
           ],
         ),
       ),
